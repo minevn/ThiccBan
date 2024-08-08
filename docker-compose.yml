@@ -2,6 +2,12 @@ services:
   thiccban:
     image: augustinominh/thiccban
     container_name: thiccban
+    environment:
+      DB_HOST: mariadb
+      DB_USER: root
+      DB_PASS: root
+      DB_NAME: litebans
+      TABLE_PREFIX: litebans_
     ports:
       - 5000:3000
     restart: always

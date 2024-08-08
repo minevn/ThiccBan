@@ -1,11 +1,12 @@
-FROM oven/bun:alpine
+FROM node:22-alpine
 
 WORKDIR /thiccban
 
 COPY ["package.json", "."]
-RUN bun install
+RUN npm install -g pnpm
+RUN pnpm install
 COPY . .
-RUN bun run lint
-RUN bun run build
+RUN pnpm run lint
+RUN pnpm run build
 
-CMD ["bun", "start"]
+CMD ["pnpm", "start"]
