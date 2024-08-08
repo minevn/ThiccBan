@@ -2,6 +2,6 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['skin.thiccmc.com'],
+    domains: ['mc-heads.net'],
   },
 }

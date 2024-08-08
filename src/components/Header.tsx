@@ -17,7 +17,7 @@ export default function Header() {
         <nav className="navbar navbar-dark navbar-expand-md py-3 centered">
           <div className="container-fluid">
             <Link className="navbar-brand d-flex align-items-center" href="/" key="brand">
-              <Image className="rounded-circle" src="/img/xd.png" alt="logo" width={35} height={35} /><span style={{fontFamily: 'Minecraft'}}>ThiccMC</span>
+              <span style={{fontFamily: 'Minecraft'}}>MineVN Network</span>
             </Link>
             <button data-bs-toggle="collapse" className="navbar-toggler" data-bs-target="#navcol" style={{borderWidth: '0px'}}>
               <span className="visually-hidden">Toggle navigation</span><span className="navbar-toggler-icon" />
@@ -26,22 +26,22 @@ export default function Header() {
               <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
                 <Link className="nav-link" href="/bans" key="bans">
-                  <span className="nav-icon">&nbsp; &nbsp;<i className="fas fa-caret-right" />&nbsp; &nbsp; &nbsp;&nbsp;</span>Bans
+                  <span className="nav-icon">&nbsp; &nbsp;<i className="fas fa-caret-right" />&nbsp; &nbsp; &nbsp;&nbsp;</span>Khoá tài khoản
                 </Link>
                 </li>
                 <li className="nav-item">
                 <Link className="nav-link" href="/mutes" key="mutes">
-                  <span className="nav-icon">&nbsp; &nbsp;<i className="fas fa-caret-right" />&nbsp; &nbsp; &nbsp;&nbsp;</span>Mutes
+                  <span className="nav-icon">&nbsp; &nbsp;<i className="fas fa-caret-right" />&nbsp; &nbsp; &nbsp;&nbsp;</span>Cấm chat
                 </Link>
                 </li>
                 <li className="nav-item">
                 <Link className="nav-link" href="/kicks" key="kicks">
-                  <span className="nav-icon">&nbsp; &nbsp;<i className="fas fa-caret-right" />&nbsp; &nbsp; &nbsp;&nbsp;</span>Kicks
+                  <span className="nav-icon">&nbsp; &nbsp;<i className="fas fa-caret-right" />&nbsp; &nbsp; &nbsp;&nbsp;</span>Sút
                 </Link>
                 </li>
                 <li className="nav-item">
                 <Link className="nav-link" href="/warns" key="warns">
-                  <span className="nav-icon">&nbsp; &nbsp;<i className="fas fa-caret-right" />&nbsp; &nbsp; &nbsp;&nbsp;</span>Warns
+                  <span className="nav-icon">&nbsp; &nbsp;<i className="fas fa-caret-right" />&nbsp; &nbsp; &nbsp;&nbsp;</span>Cảnh cáo
                 </Link>
                 </li>
                 {/* <li className="nav-item language">
@@ -56,7 +56,7 @@ export default function Header() {
                 <li className="nav-item search">
                   <form onSubmit={searchPlayer}>
                   <div className="input-group search">
-                    <input className="form-control" type="text" name="search" placeholder="Search a player..." style={{fontSize: '14px', borderWidth: '0px'}} autoComplete="off" inputMode="text" />
+                    <input className="form-control" type="text" name="search" placeholder="Tìm kiếm người chơi..." style={{fontSize: '14px', borderWidth: '0px'}} autoComplete="off" inputMode="text" />
                     <button className="btn btn-primary" type="submit"><i className="fas fa-search" /></button>
                   </div>
                   </form>

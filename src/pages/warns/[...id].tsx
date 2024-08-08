@@ -44,15 +44,15 @@ export default function WarnInfo({ id }: { id: number }) {
     return (
         <>
         <Head>
-            <title>{ (isLoading ? `Pending...` : isError ? "Error" : data.data != null ? `Warn #${id}` : "Not found") + ' | Punishments / ThiccMC'}</title>
+            <title>{ (isLoading ? `Pending...` : isError ? "Error" : data.data != null ? `Cảnh cáo #${id}` : "Not found") + ' | MineVN'}</title>
         </Head>
         <div className="content">
             <div className="centered">
                 <div className="card center" style={{maxWidth: '700px'}}>
                     <div className="card-body">
                     <div style={{marginBottom: '16px'}}>
-                        <h3 style={{fontFamily: 'Minecraft', marginBottom: '0px'}}>Warn #{id}</h3>
-                        <h6 className="text-muted mb-2" style={{marginTop: '0px'}}>{ isLoading ? `Pending...` : `Date: ${!isError && data.data != null ? DateTime.fromMillis(data.data.time).toFormat('MM/dd/yyyy hh:mm:ss') : "N/A"}`}</h6>
+                        <h3 style={{marginBottom: '0px'}}>Cảnh cáo #{id}</h3>
+                        <h6 className="text-muted mb-2" style={{marginTop: '0px'}}>{ isLoading ? `Pending...` : `Ngày: ${!isError && data.data != null ? DateTime.fromMillis(data.data.time).toFormat('MM/dd/yyyy HH:mm:ss') : "N/A"}`}</h6>
                     </div>
                     <div style={{marginBottom: '16px', overflow: isLoading ? 'none' : 'auto'}}>
                         { isLoading ? <span className="loader"></span> : isError ? <h6>An error occured while fetching data. Please try again.</h6> : data.data != null ? <InfoTable type="Warn" data={data.data} /> : <h5>Warn case <strong>#{id}</strong> does not exist in the database.</h5>}

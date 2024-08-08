@@ -1,0 +1,7 @@
+services:
+  thiccban:
+    image: augustinominh/thiccban
+    container_name: thiccban
+    ports:
+      - 5000:3000
+    restart: always

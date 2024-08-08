@@ -45,15 +45,15 @@ export default function BanInfo({ user, page }: { user: string, page: number }) 
     return (
         <>
         <Head>
-            <title>{ (isLoading ? `Pending...` : isError ? `Error` : data == null ? "Not found" : `${data.user}'s Profile`) + ' | Punishments / ThiccMC'}</title>
+            <title>{ (isLoading ? `Pending...` : isError ? `Error` : data == null ? "Not found" : `Thông tin của ${data.user}`) + ' | MineVN'}</title>
         </Head>
         <div className="content">
             <div className="centered">
                 <div className="card center" style={{maxWidth: '700px'}}>
                 <div className="card-body">
                     <div style={{marginBottom: '16px'}}>
-                        <h3 style={{fontFamily: 'Minecraft', marginBottom: '0px'}}>{ isLoading ? 'Pending...' : isError ? 'Error occured' : data == null ? 'Player not found' : `${data.user}'s Profile`}</h3>
-                        <h6 className="text-muted mb-2" style={{marginTop: '0px'}}>Infractions History</h6>
+                        <h3 style={{marginBottom: '0px'}}>{ isLoading ? 'Pending...' : isError ? 'Error occured' : data == null ? 'Player not found' : `Thông tin của ${data.user}`}</h3>
+                        <h6 className="text-muted mb-2" style={{marginTop: '0px'}}>Lịch sử vi phạm</h6>
                     </div>
                     <div style={{marginBottom: '16px', overflow: isLoading ? 'none' : 'auto'}}>
                         { isLoading ? <span className="loader" /> : isError ? <h6>Unable to fetch data.</h6> : data == null ? <h6>This player does not exist in the database.</h6> : <PlayerProfile data={data} /> }

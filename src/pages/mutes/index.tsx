@@ -38,16 +38,16 @@ export default function MuteList({ page }: { page: number }) {
   return (
     <>
     <Head>
-        <title>Mutes | Punishments / ThiccMC</title>
-        <meta name="description" content="Mutes | Punishments / ThiccMC" />
+        <title>Cấm chat | MineVN</title>
+        <meta name="description" content="Tra cứu lịch sử cấm chat tại MineVN" />
     </Head>
     <div className="content">
         <div className="centered">
         <div className="card center" style={{maxWidth: '900px', marginTop: '20px'}}>
             <div className="card-body">
             <div style={{marginBottom: '16px'}}>
-                <h3 style={{fontFamily: 'Minecraft', marginBottom: '0px'}}>List for Mutes</h3>
-                <h5 className="text-muted mb-2" style={{marginTop: '0px'}}>Total: { isLoading ? "Pending..." : isError ? "N/A" : data.query.total}</h5>
+                <h3 style={{marginBottom: '0px'}}>Lịch sử cấm chat</h3>
+                <h5 className="text-muted mb-2" style={{marginTop: '0px'}}>Tổng: { isLoading ? "Pending..." : isError ? "N/A" : data.query.total}</h5>
             </div>
             <div style={{marginBottom: '16px', overflow: isLoading ? 'none' : 'auto'}}>
                 { isLoading ? <span className="loader"></span> : isError ? <h6>An error occured while fetching data. Please try again.</h6> : <PunishTable type="mutes" data={data} />}
@@ -59,7 +59,7 @@ export default function MuteList({ page }: { page: number }) {
                         <li className="list-inline-item">
                             <button className="btn btn-primary" onClick={() => { router.push(`?page=${data.query.pageCurrent - 1}`)}} type="button" disabled={ data.query.pageCurrent == 1 ? true : false }><i className="fas fa-chevron-left" /></button>
                         </li>
-                        <li className="list-inline-item">Page { isLoading ? "?/?" : data.query.pageCurrent + "/" + data.query.pageTotal}</li>
+                        <li className="list-inline-item">Trang { isLoading ? "?/?" : data.query.pageCurrent + "/" + data.query.pageTotal}</li>
                         <li className="list-inline-item">
                             <button className="btn btn-primary" onClick={() => { router.push(`?page=${data.query.pageCurrent + 1}`)}} type="button" disabled={ data.query.pageCurrent == data.query.pageTotal ? true : false }><i className="fas fa-chevron-right" /></button>
                         </li>
